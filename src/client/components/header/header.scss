@@ -1,0 +1,19 @@
+.header{
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.8);
+    color: #ffffff;
+    &-hamburger{
+        display: flex;
+        align-items: center;
+        &__button{
+            margin-right: 10px;
+        }
+        &__text{
+            
+        }
+    }
+}
