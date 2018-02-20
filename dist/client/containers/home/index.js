@@ -28,6 +28,11 @@ var Home = function (_Component) {
     }
 
     _createClass(Home, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            document.title = this.props.route.title;
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -36,7 +41,7 @@ var Home = function (_Component) {
                 _react2.default.createElement(
                     'p',
                     null,
-                    ' home page111122233 '
+                    ' home '
                 )
             );
         }

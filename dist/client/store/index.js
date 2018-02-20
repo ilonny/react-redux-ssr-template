@@ -18,9 +18,27 @@ var _index2 = _interopRequireDefault(_index);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function configureStore() {
-	return (0, _redux.createStore)(_index2.default, window.__INITIAL_STATE__, (0, _redux.compose)((0, _redux.applyMiddleware)(_reduxThunk2.default)
+	// return createStore(
+	// 	appReducer,
+	// 	window.__INITIAL_STATE__,
+	// 	compose(
+	// 		applyMiddleware(thunk),
+	// 		// window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+	// 	)
+	// );
+
+
+	var store = (0, _redux.createStore)(_index2.default, window.__INITIAL_STATE__, (0, _redux.compose)((0, _redux.applyMiddleware)(_reduxThunk2.default)
 	// window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 	));
+	if (module.hot) {
+		module.hot.accept('../reducers', function () {
+			var nextRootReducer = require('../reducers/index');
+			store.replaceReducer(nextRootReducer);
+		});
+	}
+
+	return store;
 }
 ;
 

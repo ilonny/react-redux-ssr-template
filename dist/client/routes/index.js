@@ -23,13 +23,16 @@ var routes = [{
     routes: [{
         path: '/',
         exact: true,
-        component: _index2.default
+        component: _index2.default,
+        title: 'Home page title'
     }, {
         path: '/home',
-        component: _index2.default
+        component: _index2.default,
+        title: 'Home page title'
     }, {
         path: '/about',
-        component: _index4.default
+        component: _index4.default,
+        title: 'About page title'
     }]
 }];
 

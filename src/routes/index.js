@@ -5,7 +5,7 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 
 import StaticRouter from 'react-router-dom/StaticRouter';
-import { renderRoutes } from 'react-router-config';
+import { matchRoutes, renderRoutes } from 'react-router-config';
 
 import routes from '../client/routes';
 
@@ -18,7 +18,14 @@ router.get('*', (req, res) => {
             {renderRoutes(routes)}
         </StaticRouter>
     );
-    res.render('index', { title: 'Express', data: false, content });
+    let m_routes = matchRoutes(routes, req.url);
+    let route_title;
+    m_routes.forEach(element => {
+        if (element.route.title){
+            route_title = element.route.title;
+        }
+    });
+    res.render('index', { title: route_title, data: false, content });
 });
 
 module.exports = router;

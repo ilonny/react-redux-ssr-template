@@ -28,6 +28,11 @@ var About = function (_Component) {
     }
 
     _createClass(About, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            document.title = document.title = this.props.route.title;
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(

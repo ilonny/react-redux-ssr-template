@@ -35,7 +35,14 @@ router.get('*', function (req, res) {
         { location: req.url, context: context },
         (0, _reactRouterConfig.renderRoutes)(_routes2.default)
     ));
-    res.render('index', { title: 'Express', data: false, content: content });
+    var m_routes = (0, _reactRouterConfig.matchRoutes)(_routes2.default, req.url);
+    var route_title = void 0;
+    m_routes.forEach(function (element) {
+        if (element.route.title) {
+            route_title = element.route.title;
+        }
+    });
+    res.render('index', { title: route_title, data: false, content: content });
 });
 
 module.exports = router;

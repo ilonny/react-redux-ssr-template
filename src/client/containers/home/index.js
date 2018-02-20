@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 
 export default class Home extends Component {
+    componentDidMount(){
+        document.title = this.props.route.title
+    }
     render() {
         return (
             <div>
-                <p> home page111122233 </p>
+                <p> home </p>
             </div>
         )
     }
