@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Link from 'react-router-dom/Link';
+// import Link from 'react-router-dom/Link';
 import { renderRoutes } from 'react-router-config';
 import Header from '../components/header/index'
 
