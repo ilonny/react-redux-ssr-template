@@ -2,10 +2,25 @@ import React, { Component } from 'react'
 import Link from 'react-router-dom/Link';
 import videoWebm from '../../assets/video/video-background.webm'
 import videoMP4 from '../../assets/video/video-background.mp4'
+import InputMask from 'react-input-mask';
+import serialize from 'form-serialize';
 import './home-page.scss'
 
 export default class Home extends Component {
-    componentDidMount(){
+    constructor(props){
+        super(props);
+        this.state = {
+            firstName: "",
+            phone: "",
+        }
+        this.submitCallback = this.submitCallback.bind(this);
+    }
+    submitCallback(e){
+        e.preventDefault();
+        let form_data = serialize(e.target, {hash:true})
+        console.log(serialize(e.target, { hash: true }))
+    }
+    componentDidMount(){    
     }
     render() {
         return (
@@ -34,9 +49,23 @@ export default class Home extends Component {
                     <div className="callback-form">
                         <div className="content">
                             <div className="callback-form__title">Бесплатная консультация</div>
-                            <form action="">
-                                <input type="text" placeholder="Ваше имя" />
-                                <input type="text" placeholder="Телефон"/>
+                            <form id="#example-form" onSubmit={this.submitCallback.bind(this)}>
+                                <InputMask 
+                                    name="name"
+                                    ref={input => { this.firstNameInp = input; }}
+                                    type="text"
+                                    placeholder="Ваше имя" 
+                                    mask="aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                                    maskChar=""
+                                    formatChars={{a: '[A-Za-zА-Яа-я]'}}
+                                />
+                                <InputMask 
+                                    name="phone" 
+                                    ref={input => { this.phoneInp = input; }}
+                                    type="text"
+                                    placeholder="Телефон"
+                                    mask="+7(999) 999-99-99"
+                                />
                                 <button>Жду звонка</button>
                             </form>
                         </div>
