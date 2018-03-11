@@ -4,13 +4,20 @@ import '../../assets/styles/hamburgers.scss'
 export default class Header extends Component {
     constructor(props){
         super(props);
-        this.state = {}
+        this.state = {
+            hamburgerOpened: false
+        }
+    }
+    toggleSidebar(){
+        this.setState({
+            hamburgerOpened: !this.state.hamburgerOpened            
+        })
     }
     render() {
         return (
             <header className="header">
                 <div className="header-hamburger">
-                    <button class="hamburger hamburger--minus is-active" type="button">
+                    <button class={this.state.hamburgerOpened ? "hamburger hamburger--minus is-active" : "hamburger hamburger--minus"} type="button" onClick={() => this.toggleSidebar()}>
                         <span class="hamburger-box">
                             <span class="hamburger-inner"></span>
                         </span>
