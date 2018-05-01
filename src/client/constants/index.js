@@ -1,7 +1,7 @@
 import keyMirror from 'key-mirror'
 
 export default keyMirror({
-	START_LOAD_UNITS: null,
+	TOGGLE_SIDEBAR: null,
 })
 
 // NAME_OF_CONSTANT: null,

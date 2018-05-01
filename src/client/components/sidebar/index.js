@@ -8,7 +8,8 @@ export default class Sidebar extends Component {
     }
     render() {
         return (
-            <aside>
+            <aside className="sidebar">
+                sidebar
             </aside>
         )
     }

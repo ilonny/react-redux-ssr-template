@@ -1,15 +1,24 @@
-import constants from 'constants'
+import constants from '../constants/index'
 
 const initialState = {
-	test: 123,
+	sidebar: {
+		opened: false,
+	}
 }
 
 const mainReducer = function (state = initialState, action) {  
+	console.log('action', action)
 	switch(action.type) {
-		case constants.TEST_ACTION:
-			console.log('TEST_ACTION dispatched')				
-			return { ...state, test: true }
+		case constants.TOGGLE_SIDEBAR:
+			console.log('TOGGLE_SIDEBAR dispatched')				
+			return { 
+				...state,
+				sidebar: {
+					opened: !state.sidebar.opened
+				}
+			}
 		default:
+		console.log('default dispatched')				
 			return state
 	}
 }
