@@ -8,7 +8,7 @@ export default class Sidebar extends Component {
     }
     render() {
         return (
-            <aside className="sidebar">
+            <aside className={this.props.opened ? "sidebar opened" : "sidebar"}>
                 sidebar
             </aside>
         )

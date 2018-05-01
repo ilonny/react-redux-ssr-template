@@ -10,7 +10,7 @@ class AppRoot extends Component {
         return (
             <div id="container">
                 <Header toggleSidebar={this.props.toggleSidebar} />
-                <Sidebar toggleSidebar={this.props.toggleSidebar} />
+                <Sidebar toggleSidebar={this.props.toggleSidebar} opened={this.props.sidebar.opened}/>
                 <main className="mdl-layout__content">
                     {renderRoutes(this.props.route.routes)}
                 </main>
