@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 import Link from 'react-router-dom/Link';
 import videoWebm from '../../assets/video/video-background.webm'
 import videoMP4 from '../../assets/video/video-background.mp4'
-import InputMask from 'react-input-mask';
-import serialize from 'form-serialize';
 import './home-page.scss'
+import HomeCallbackForm from './callback-form'
 // import AboutSection from './about-section'
 
 export default class Home extends Component {
@@ -14,13 +13,8 @@ export default class Home extends Component {
             firstName: "",
             phone: "",
         }
-        this.submitCallback = this.submitCallback.bind(this);
     }
-    submitCallback(e){
-        e.preventDefault();
-        let form_data = serialize(e.target, {hash:true})
-        console.log('callback form data: ', form_data)
-    }
+
     componentDidMount(){    
     }
     render() {
@@ -43,35 +37,12 @@ export default class Home extends Component {
                                 <div className="services-blocks">
                                     <Link to="/home" className="services__link">Разработка веб-сайтов</Link>
                                     <Link to="/home" className="services__link">Продвижение и реклама в интернете</Link>
-                                    <Link to="/home" className="services__link">Разаботка мобильных приложений</Link>
+                                    <Link to="/home" className="services__link">Разработка мобильных приложений</Link>
                                     <Link to="/home" className="services__link">Ведение вашего бренда в соц сетях</Link>
                                 </div>
                             </div>
                         </div>
-                        <div className="callback-form">
-                            <div className="content">
-                                <div className="callback-form__title">Бесплатная консультация</div>
-                                <form id="#example-form" onSubmit={this.submitCallback.bind(this)}>
-                                    <InputMask 
-                                        name="name"
-                                        ref={input => { this.firstNameInp = input; }}
-                                        type="text"
-                                        placeholder="Ваше имя" 
-                                        mask="aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-                                        maskChar=""
-                                        formatChars={{a: '[A-Za-zА-Яа-я]'}}
-                                    />
-                                    <InputMask 
-                                        name="phone" 
-                                        ref={input => { this.phoneInp = input; }}
-                                        type="text"
-                                        placeholder="Телефон"
-                                        mask="+7(999) 999-99-99"
-                                    />
-                                    <button>Жду звонка</button>
-                                </form>
-                            </div>
-                        </div>
+                        <HomeCallbackForm />
                     </div>
                 </section>
                 {/* <AboutSection /> */}

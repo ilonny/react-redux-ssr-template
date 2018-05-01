@@ -1,6 +1,7 @@
 import React from 'react'
 import { render } from 'react-dom'
 import App from './containers/App'
+import './assets/material-design-iconic-font/css/material-design-iconic-font.min.scss'
 import './assets/styles/style.scss'
 import { AppContainer } from 'react-hot-loader'
 
