@@ -2,23 +2,27 @@ import constants from '../constants/index'
 
 const initialState = {
 	sidebar: {
-		opened: false,
+		opened: true,
 	}
 }
 
 const mainReducer = function (state = initialState, action) {  
-	console.log('action', action)
 	switch(action.type) {
 		case constants.TOGGLE_SIDEBAR:
-			console.log('TOGGLE_SIDEBAR dispatched')				
 			return { 
 				...state,
 				sidebar: {
 					opened: !state.sidebar.opened
 				}
 			}
+		case constants.HIDE_SIDEBAR:
+			return { 
+				...state,
+				sidebar: {
+					opened: false
+				}
+			}
 		default:
-		console.log('default dispatched')				
 			return state
 	}
 }

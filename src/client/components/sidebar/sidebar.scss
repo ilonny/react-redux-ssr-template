@@ -5,12 +5,39 @@
     padding: 20px;
     max-width: 100%;
     z-index: 33;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,1);
     color: #fff;
     min-height: 100vh;
     transition: all 200ms ease;
     transform: translateX(-100%);
     &.opened{
         transform: translateX(0%);
+    }
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
+    &-top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-close{
+            margin-right: 20px;
+            padding: 5px;
+            font-size: 30px;
+            transition: all 200ms ease;
+            &:hover{
+                opacity: 0.8;
+                cursor: pointer;
+            }
+        }
+    }
+    &-hrefs{
+        padding: 20px 0;
+        a{
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+        }
     }
 }

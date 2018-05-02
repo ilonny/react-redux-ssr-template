@@ -4,13 +4,17 @@ import { renderRoutes } from 'react-router-config';
 import Header from '../components/header/index'
 import Sidebar from '../components/sidebar/index'
 import { connect } from 'react-redux'
-import { toggleSidebar } from '../actions/sidebar'
+import { toggleSidebar, hideSidebar } from '../actions/sidebar'
 class AppRoot extends Component {
     render() {
         return (
             <div id="container">
                 <Header toggleSidebar={this.props.toggleSidebar} />
-                <Sidebar toggleSidebar={this.props.toggleSidebar} opened={this.props.sidebar.opened}/>
+                <Sidebar
+                    toggleSidebar={this.props.toggleSidebar}
+                    opened={this.props.sidebar.opened}
+                    hideSidebar={this.props.hideSidebar}
+                />
                 <main className="mdl-layout__content">
                     {renderRoutes(this.props.route.routes)}
                 </main>
@@ -25,7 +29,8 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
 	return {
-        toggleSidebar:  () => dispatch(toggleSidebar())
+        toggleSidebar:  () => dispatch(toggleSidebar()),
+        hideSidebar:  () => dispatch(hideSidebar()),
 	}
 }
 export default connect(mapStateToProps, mapDispatchToProps)(AppRoot)

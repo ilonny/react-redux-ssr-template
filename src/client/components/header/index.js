@@ -9,13 +9,12 @@ export default class Header extends Component {
         }
     }
     toggleSidebar(){
-        this.setState({
-            hamburgerOpened: !this.state.hamburgerOpened            
-        })
+        // this.setState({
+        //     hamburgerOpened: !this.state.hamburgerOpened            
+        // })
         this.props.toggleSidebar()
     }
     render() {
-        console.log('header props', this.props)
         return (
             <header className="header">
                 <div className="header-hamburger">

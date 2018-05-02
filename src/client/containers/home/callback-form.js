@@ -14,18 +14,17 @@ export default class HomeCallbackForm extends Component {
     }
     submitCallback(e){
         e.preventDefault();
-        let form_data = serialize(e.target, {hash:true})
-        console.log('callback form data: ', form_data)
+        let form_data = serialize(e.target, {hash:true});
+        console.log('form_data', form_data);
     }
     setVisible(){
-        if (window.outerWidth < 1140) {
-            this.setState(() => {
-                return {opened: !this.state.opened}
-            })
-        }
+        this.setState(() => {
+            return {opened: !this.state.opened}
+        })
+        // if (window.outerWidth < 1140) {
+        // }
     }
     render() {
-        console.log('state', this.state);
         return (
             <div className={this.state.opened ? "callback-form opened" : "callback-form"}>
                 <div className="content">

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 import BrowserRouter from 'react-router-dom/BrowserRouter';
 import { renderRoutes } from 'react-router-config';
-
+// import { AnimatedSwitch } from 'react-router-transition';
 import { Provider } from 'react-redux';
 
 import configureStore from '../store'
