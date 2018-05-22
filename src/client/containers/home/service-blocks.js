@@ -13,7 +13,7 @@ export default function ServiceBlocks(){
                 <div className="img-wrap">
                     <img src={adaptiveIconWhite} />
                 </div>
-                <p>Разработка адаптивных сайтов</p>
+                <p>Разработка <br/>адаптивных сайтов</p>
             </Link>
             <Link to="/home" className="block">
                 <div className="img-wrap">

@@ -3,8 +3,7 @@ import './header.scss'
 import '../../assets/styles/hamburgers.scss'
 import SocialLinks from '../social-links/index.js'
 import Logo from '../../assets/images/logo.svg'
-import { Link } from 'react-router-dom'
-
+import NavLinks from '../nav-links/index.js'
 export default class Header extends Component {
     constructor(props){
         super(props);
@@ -13,9 +12,9 @@ export default class Header extends Component {
         }
     }
     toggleSidebar(){
-        // this.setState({
-        //     hamburgerOpened: !this.state.hamburgerOpened            
-        // })
+        this.setState({
+            hamburgerOpened: !this.state.hamburgerOpened            
+        })
         this.props.toggleSidebar()
     }
     render() {
@@ -32,11 +31,7 @@ export default class Header extends Component {
                     <img src={Logo} class="site-logo" />
                 </div>
                 <div className="center-side header-links">
-                    <Link onClick={ () => this.props.hideSidebar() } to="/about">О компании</Link>
-                    <Link onClick={ () => this.props.hideSidebar() } to="/service">Услуги</Link>
-                    <Link onClick={ () => this.props.hideSidebar() } to="/contacts">Контакты</Link>
-                    <Link onClick={ () => this.props.hideSidebar() } to="/collab">Сотрудничество</Link>
-                    <Link onClick={ () => this.props.hideSidebar() } to="/vacancy">Вакансии</Link>
+                    <NavLinks />
                 </div>
                 <SocialLinks />           
             </header>

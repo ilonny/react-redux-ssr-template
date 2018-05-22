@@ -4,7 +4,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.9);
     color: #ffffff;
     z-index: 22;
     display: flex;
@@ -32,9 +32,11 @@
         }
     }
     .header-links{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        & > div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
         a{
             display: block;
             color: #fff;

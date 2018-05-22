@@ -49,7 +49,6 @@
             flex: 1 1 35%;
             border-radius: 3px;
             p{
-                margin: 0;
                 white-space: nowrap;
                 br{
                     display: none;
@@ -57,7 +56,7 @@
             }
         }
     }
-    @media screen and (max-width: 620px){
+    @media screen and (max-width: 620px), screen and (max-height: 760px){
         display: block;
         .block{
             border: 1px solid #fff;
@@ -68,6 +67,9 @@
             }       
             .img-wrap{
                 display: none;
+            }
+            p{
+                margin: 0;
             }
         }
     }
