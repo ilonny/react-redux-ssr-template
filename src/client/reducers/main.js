@@ -2,21 +2,21 @@ import constants from '../constants/index'
 
 const initialState = {
 	sidebar: {
-		opened: true,
+		opened: false,
 	}
 }
 
-const mainReducer = function (state = initialState, action) {  
+const mainReducer = function (state = initialState, action) {
 	switch(action.type) {
 		case constants.TOGGLE_SIDEBAR:
-			return { 
+			return {
 				...state,
 				sidebar: {
 					opened: !state.sidebar.opened
 				}
 			}
 		case constants.HIDE_SIDEBAR:
-			return { 
+			return {
 				...state,
 				sidebar: {
 					opened: false

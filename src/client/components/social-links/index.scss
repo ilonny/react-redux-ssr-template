@@ -1,0 +1,19 @@
+.social-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a{
+        color: #fff;
+        display: block;
+        font-size: 21px;
+        padding-left: 20px;
+        cursor: pointer;
+        transition: all 250ms ease;
+        &:hover{
+            color: #FF494E;
+        }
+        &:nth-child(1){
+            padding-left: 0;
+        }
+    }
+}

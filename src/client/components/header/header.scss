@@ -1,20 +1,79 @@
 .header{
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     position: fixed;
     left: 0;
     top: 0;
     background: rgba(0,0,0,0.8);
     color: #ffffff;
     z-index: 22;
-    &-hamburger{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left-side{
         display: flex;
         align-items: center;
-        &__button{
-            margin-right: 10px;
+        justify-content: flex-start;
+        .header-hamburger{
+            display: flex;
+            display: none;
+            align-items: center;
+            &__button{
+                margin-right: 10px;
+            }
+            .hamburger{
+                padding: 10px;
+                margin-right: 10px;
+            }
         }
-        &__text{
-
+        .site-logo{
+            max-width: 150px;
+            display: block;
+        }
+    }
+    .header-links{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        a{
+            display: block;
+            color: #fff;
+            padding: 10px;
+            font-weight: 300;
+            transition: all 250ms ease;
+            font-size: 17px;
+            text-decoration: none;
+            cursor: pointer;
+            &:hover{
+                color: #FF494E;
+            }
+        }
+    }
+    @media screen and (max-width: 1024px){
+    .left-side{
+        .header-hamburger{
+            display: flex;
+        }
+    }
+        .header-links{
+            display: none;
+        }
+    }
+    @media screen and (max-width: 460px){
+        .social-links{
+            display: none;
+        }
+        .left-side{
+            width: 100%;
+            justify-content: space-between;
+            .header-hamburger{
+                .hamburger{
+                    padding: 0;
+                }
+            }
+            .site-logo{
+                max-width: 115px;
+            }
         }
     }
 }
