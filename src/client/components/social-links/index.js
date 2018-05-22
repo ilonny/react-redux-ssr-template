@@ -1,7 +1,7 @@
 import React from 'react'
 import MaterialIcon from 'react-material-iconic-font'
 import './index.scss'
-import instLogo from '../../assets/images/instagram.svg'
+
 export default function SocialLinks() {
     return (
         <div className="social-links">

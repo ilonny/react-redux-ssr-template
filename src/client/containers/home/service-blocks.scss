@@ -1,0 +1,82 @@
+.services-blocks{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .block{
+        cursor: pointer;
+        color: #fff;
+        text-decoration: none;
+        transition: all 250ms ease;
+        flex: 1 1 25%;
+        text-align: center;
+        padding: 15px 0;
+        .img-wrap{
+            max-width: 115px;
+            max-height: 115px;
+            position: relative;
+            margin: auto;
+            display: flex;
+            img{
+                display: block;
+                max-width: 100%;
+                max-height: 115px;
+                margin: auto;
+            }
+        }
+        p{
+            margin: 0;
+            margin-top: 15px;
+            br{
+                display: none;
+                @media screen and (max-width: 1222px){
+                    display: inline;
+                }
+            }
+        }
+        &:hover{
+            box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+    }
+    @media screen and (max-width: 850px){
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 -10px;
+        .block{
+            margin: 10px;
+            flex: 1 1 35%;
+            border-radius: 3px;
+            p{
+                margin: 0;
+                white-space: nowrap;
+                br{
+                    display: none;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 620px){
+        display: block;
+        .block{
+            border: 1px solid #fff;
+            display: block;
+            margin-top: 20px;
+            &:hover{
+                transform: none;
+            }       
+            .img-wrap{
+                display: none;
+            }
+        }
+    }
+    //iphone4
+    @media screen and (max-height: 550px) and (max-width: 374px){
+        .block{
+            margin-top: 10px;
+            padding: 10px 0;
+            font-size: 15px;
+        }
+    }        
+}

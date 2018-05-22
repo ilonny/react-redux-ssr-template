@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import Link from 'react-router-dom/Link';
 import videoWebm from '../../assets/video/video-background.webm'
 import videoMP4 from '../../assets/video/video-background.mp4'
 import './home-page.scss'
 import HomeCallbackForm from './callback-form'
+import ServiceBlocks from './service-blocks'
 // import AboutSection from './about-section'
 
 export default class Home extends Component {
@@ -27,19 +27,14 @@ export default class Home extends Component {
                             <source src={videoMP4} type="video/mp4"/>
                         </video>
                         <div className="content">
-                            <h1>Digital агентство %NAME%</h1>
+                            <h1>Digital-агентство Flames</h1>
                             <h2>
                                 Разработка и комплексное продвижение сайтов.<br/>
-                                Создание мобильных приложений
+                                Создание мобильных приложений.
                             </h2>
                             <div className="services">
-                                <div className="services__title">Мы предлагаем:</div>
-                                <div className="services-blocks">
-                                    <Link to="/home" className="services__link">Разработка веб-сайтов</Link>
-                                    <Link to="/home" className="services__link">Продвижение и реклама в интернете</Link>
-                                    <Link to="/home" className="services__link">Разработка мобильных приложений</Link>
-                                    <Link to="/home" className="services__link">Ведение вашего бренда в соц сетях</Link>
-                                </div>
+                                <h3 className="services__title">Наши услуги:</h3>
+                                <ServiceBlocks />
                             </div>
                         </div>
                         <HomeCallbackForm />
