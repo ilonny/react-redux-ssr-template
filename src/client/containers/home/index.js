@@ -23,8 +23,8 @@ export default class Home extends Component {
                 <section class="main-video">
                     <div className="video-wrap">
                         <video id="home-page-video" class="video-src" loop width="100%" height="100%"  autoPlay={true}>
-                            <source src={videoWebm} type="video/webm; codecs='vp8, vorbis'"/>
-                            <source src={videoMP4} type="video/mp4"/>
+                            {/* <source src={videoWebm} type="video/webm; codecs='vp8, vorbis'"/>
+                            <source src={videoMP4} type="video/mp4"/> */}
                         </video>
                         <div className="content">
                             <h1>Digital-агентство Flames</h1>

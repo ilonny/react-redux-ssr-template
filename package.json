@@ -23,6 +23,7 @@
     "babel-preset-react": "^6.22.0",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.22.0",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "css-loader": "^0.26.1",
     "eslint": "^3.14.0",
     "eslint-loader": "^1.6.1",
@@ -30,6 +31,7 @@
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.26.0",
     "node-sass": "^4.3.0",
+    "postcss-loader": "^2.1.5",
     "react-hot-loader": "^3.0.0-beta.6",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
@@ -40,6 +42,7 @@
   },
   "dependencies": {
     "body-parser": "^1.17.2",
+    "browser-sync": "^2.24.4",
     "cookie-parser": "^1.4.3",
     "debug": "^2.6.8",
     "font-awesome": "^4.7.0",
@@ -62,5 +65,16 @@
     "redux-thunk": "^2.2.0",
     "request": "^2.81.0",
     "serve-favicon": "^2.4.5"
-  }
+  },
+  "browserslist": [
+    "> 0.05%",
+    "iOS 7",
+    "iOS 8",
+    "iOS 9",
+    "iOS 10",
+    "ios_saf 7",
+    "ios_saf 8",
+    "ios_saf 9",
+    "ios_saf 10"
+  ]
 }

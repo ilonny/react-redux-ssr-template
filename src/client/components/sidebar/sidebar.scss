@@ -8,6 +8,7 @@
     z-index: 33;
     background: rgba(0,0,0,0.9);
     color: #fff;
+    min-height: calc(100% - 75px);
     min-height: calc(100vh - 75px);
     top: 75px;
     transition: all 200ms ease;

@@ -4,6 +4,8 @@ import '../../assets/styles/hamburgers.scss'
 import SocialLinks from '../social-links/index.js'
 import Logo from '../../assets/images/logo.svg'
 import NavLinks from '../nav-links/index.js'
+import { Link } from 'react-router-dom'
+
 export default class Header extends Component {
     constructor(props){
         super(props);
@@ -28,7 +30,9 @@ export default class Header extends Component {
                             </span>
                         </button>
                     </div>
-                    <img src={Logo} class="site-logo" />
+                    <Link to="/">
+                        <img src={Logo} class="site-logo" />
+                    </Link>
                 </div>
                 <div className="center-side header-links">
                     <NavLinks />
