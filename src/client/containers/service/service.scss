@@ -23,4 +23,11 @@
             }
         }
     }
+    @media screen and (max-width: 620px), screen and (max-height: 760px){
+        .services-blocks{
+            .block{
+                border: 1px solid #202020;
+            }
+        }
+    }
 }
