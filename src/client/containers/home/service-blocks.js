@@ -1,38 +1,48 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import Link from 'react-router-dom/Link'
 import './service-blocks.scss'
+//для главной страницы
 import adaptiveIconWhite from '../../assets/images/adaptive-layout-white.svg'
 import marketingIconWhite from '../../assets/images/marketing-white.svg'
 import smartphoneIconWhite from '../../assets/images/smartphone-white.svg'
 import socialIconWhite from '../../assets/images/social-media-white.svg'
 
-export default function ServiceBlocks(){
-    return (
-        <div className="services-blocks">
-            <Link to="/home" className="block">
-                <div className="img-wrap">
-                    <img src={adaptiveIconWhite} />
-                </div>
-                <p>Разработка <br/>адаптивных сайтов</p>
-            </Link>
-            <Link to="/home" className="block">
-                <div className="img-wrap">
-                    <img src={marketingIconWhite} />
-                </div>
-                <p>Продвижение и реклама <br/>в интернете</p>
-            </Link>
-            <Link to="/home" className="block">
-                <div className="img-wrap">
-                    <img src={smartphoneIconWhite} />
-                </div>
-                <p>Разработка мобильных <br/>приложений</p>
-            </Link>
-            <Link to="/home" className="block">
-                <div className="img-wrap">
-                    <img src={socialIconWhite} />
-                </div>
-                <p>Ведение вашего бренда <br/>в соц сетях</p>
-            </Link>
-        </div>
-    )
+//для страницы услуг
+import adaptiveIcon from '../../assets/images/adaptive-layout.svg'
+import marketingIcon from '../../assets/images/marketing.svg'
+import smartphoneIcon from '../../assets/images/smartphone.svg'
+import socialIcon from '../../assets/images/social-media.svg'
+
+export default class ServiceBlocks extends PureComponent{
+    render(){
+        let { page } = this.props
+        return (
+            <div className="services-blocks">
+                <Link to="/home" className="block">
+                    <div className="img-wrap">
+                        <img src={page == "index" ? adaptiveIconWhite : adaptiveIcon} />
+                    </div>
+                    <p>Разработка <br/>адаптивных сайтов</p>
+                </Link>
+                <Link to="/home" className="block">
+                    <div className="img-wrap">
+                        <img src={page == "index" ? marketingIconWhite : marketingIcon} />
+                    </div>
+                    <p>Продвижение и реклама <br/>в интернете</p>
+                </Link>
+                <Link to="/home" className="block">
+                    <div className="img-wrap">
+                        <img src={page == "index" ? smartphoneIconWhite : smartphoneIcon} />
+                    </div>
+                    <p>Разработка мобильных <br/>приложений</p>
+                </Link>
+                <Link to="/home" className="block">
+                    <div className="img-wrap">
+                        <img src={page == "index" ? socialIconWhite : socialIcon} />
+                    </div>
+                    <p>Ведение вашего бренда <br/>в соц сетях</p>
+                </Link>
+            </div>
+        )
+    }
 }

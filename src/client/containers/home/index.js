@@ -30,7 +30,7 @@ export default class Home extends Component {
                             </h2>
                             <div className="services">
                                 <h3 className="services__title">Наши услуги:</h3>
-                                <ServiceBlocks />
+                                <ServiceBlocks page="index"/>
                             </div>
                         </div>
                         <HomeCallbackForm />

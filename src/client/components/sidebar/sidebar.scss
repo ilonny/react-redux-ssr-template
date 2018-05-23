@@ -55,5 +55,7 @@
         width: 100%;
         min-width: 100%;
         top: 64px;
+        min-height: calc(100% - 64px);
+        min-height: calc(100vh - 64px);
     }
 }

@@ -36,7 +36,7 @@ export default class Header extends Component {
                     </Link>
                 </div>
                 <div className="center-side header-links">
-                    <NavLinks />
+                    <NavLinks hideSidebar={this.props.hideSidebar}/>
                 </div>
                 <SocialLinks />           
             </header>
