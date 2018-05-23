@@ -20,17 +20,18 @@ export default class Header extends Component {
         this.props.toggleSidebar()
     }
     render() {
+        console.log('hedaer props', this.props)
         return (
             <header className="header">
                 <div className="left-side">
                     <div className="header-hamburger">
-                        <button class={this.state.hamburgerOpened ? "hamburger hamburger--minus is-active" : "hamburger hamburger--minus"} type="button" onClick={() => this.toggleSidebar()}>
+                        <button class={this.props.sidebar.opened ? "hamburger hamburger--minus is-active" : "hamburger hamburger--minus"} type="button" onClick={() => this.toggleSidebar()}>
                             <span class="hamburger-box">
                                 <span class="hamburger-inner"></span>
                             </span>
                         </button>
                     </div>
-                    <Link to="/">
+                    <Link to="/" onClick={this.props.hideSidebar}>
                         <img src={Logo} class="site-logo" />
                     </Link>
                 </div>

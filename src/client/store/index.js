@@ -19,7 +19,7 @@ export default function configureStore(){
 		window.__INITIAL_STATE__,
 		compose(
 			applyMiddleware(thunk),
-			// window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+			window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 		)
 	);
 	if (module.hot){

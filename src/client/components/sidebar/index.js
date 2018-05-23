@@ -13,7 +13,7 @@ export default class Sidebar extends Component {
         return (
             <aside className={this.props.opened ? "sidebar opened" : "sidebar"}>
                 <div className="sidebar-hrefs">
-                    <NavLinks />
+                    <NavLinks hideSidebar={this.props.hideSidebar}/>
                 </div>
                 <div className="sidebar-bottom">
                     <p>Flames Digital Agency</p>

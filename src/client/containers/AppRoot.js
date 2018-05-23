@@ -9,7 +9,7 @@ class AppRoot extends Component {
     render() {
         return (
             <div id="container">
-                <Header toggleSidebar={this.props.toggleSidebar} />
+                <Header toggleSidebar={this.props.toggleSidebar} sidebar={this.props.sidebar} hideSidebar={this.props.hideSidebar}/>
                 <Sidebar
                     toggleSidebar={this.props.toggleSidebar}
                     opened={this.props.sidebar.opened}
