@@ -5,8 +5,17 @@ import Header from '../components/header/index'
 import Sidebar from '../components/sidebar/index'
 import { connect } from 'react-redux'
 import { toggleSidebar, hideSidebar } from '../actions/sidebar'
+import Footer from './footer/index'
 class AppRoot extends Component {
     render() {
+        console.log('app props', this.props)
+        let footer;
+        if (this.props.location.pathname != "/"){
+            footer = <Footer />;
+        } else {
+            footer = null;
+        }
+        console.log('footer = ', footer)
         return (
             <div id="container">
                 <Header toggleSidebar={this.props.toggleSidebar} sidebar={this.props.sidebar} hideSidebar={this.props.hideSidebar}/>
@@ -18,6 +27,7 @@ class AppRoot extends Component {
                 <main className="mdl-layout__content">
                     {renderRoutes(this.props.route.routes)}
                 </main>
+                {footer}
             </div>
         );
     }
