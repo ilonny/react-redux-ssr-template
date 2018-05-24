@@ -1,6 +1,7 @@
 import AppRoot from '../containers/AppRoot';
 import Home from '../containers/home/index';
 import Service from '../containers/service/index';
+import Sites from '../containers/sites/index';
 // import About from '../containers/about/index';
 
 const routes = [
@@ -17,6 +18,11 @@ const routes = [
                 path: '/service',
                 component: Service,
                 title: 'Услуги | Flames Digital Agency'                
+            },
+            {
+                path: '/razrabotka-saitov',
+                component: Sites,
+                title: 'Услуги - Разработка адаптивных сайтов | Flames Digital Agency'                
             },
         ]
     }

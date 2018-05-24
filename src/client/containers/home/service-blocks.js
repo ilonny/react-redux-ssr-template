@@ -18,25 +18,25 @@ export default class ServiceBlocks extends PureComponent{
         let { page } = this.props
         return (
             <div className="services-blocks">
-                <Link to="/home" className="block">
+                <Link to="/razrabotka-saitov" className="block">
                     <div className="img-wrap">
                         <img src={page == "index" ? adaptiveIconWhite : adaptiveIcon} />
                     </div>
                     <p>Разработка <br/>адаптивных сайтов</p>
                 </Link>
-                <Link to="/home" className="block">
+                <Link to="/marketing" className="block">
                     <div className="img-wrap">
                         <img src={page == "index" ? marketingIconWhite : marketingIcon} />
                     </div>
                     <p>Продвижение и реклама <br/>в интернете</p>
                 </Link>
-                <Link to="/home" className="block">
+                <Link to="/mobile-apps" className="block">
                     <div className="img-wrap">
                         <img src={page == "index" ? smartphoneIconWhite : smartphoneIcon} />
                     </div>
                     <p>Разработка мобильных <br/>приложений</p>
                 </Link>
-                <Link to="/home" className="block">
+                <Link to="/smm" className="block">
                     <div className="img-wrap">
                         <img src={page == "index" ? socialIconWhite : socialIcon} />
                     </div>

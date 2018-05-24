@@ -6,7 +6,7 @@ export default class InnerBanner extends PureComponent{
         return (
             <div className={this.props.type == "small" ? "inner-banner inner-banner--small" : "inner-banner"} >
                 <div className="content">
-                    <h1>{this.props.title}</h1>
+                    <h1 dangerouslySetInnerHTML={{__html: this.props.title}}></h1>
                     <h2 dangerouslySetInnerHTML={{__html: this.props.text}}></h2>
                 </div>
             </div>
