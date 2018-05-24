@@ -8,6 +8,7 @@ import Smm from '../containers/smm/index';
 import About from '../containers/about/index';
 import Collab from '../containers/collab/index';
 import Vacancy from '../containers/vacancy/index';
+import Contacts from '../containers/contacts/index';
 // import About from '../containers/about/index';
 
 const routes = [
@@ -59,6 +60,11 @@ const routes = [
                 path: '/vacancy',
                 component: Vacancy,
                 title: 'Flames Digital Agency | Вакансии'
+            },
+            {
+                path: '/contacts',
+                component: Contacts,
+                title: 'Flames Digital Agency | Контакты'
             },
         ]
     }
