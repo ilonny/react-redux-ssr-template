@@ -1,0 +1,112 @@
+.smm-wrap{
+    color: #202020;
+    h5{
+        font-size: 24px;
+        font-weight: normal;
+        margin: 0;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .text{
+        font-weight: 300;
+        font-size: 18px;
+        strong{
+            font-weight: normal;
+        }
+    }
+    @media screen and (max-width: 760px){
+        h5{
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+    }
+}
+.gr-wrap{
+    margin-top: 50px;
+    padding: 50px 0;
+    background: #f2f2f2;
+    &__title{
+        font-size: 24px;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+    .blocks{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        .block{
+            flex: 1 1 50%;
+            text-align: center;
+            .title{
+                font-size: 32px;
+                font-weight: bold;
+                position: relative;
+                z-index: 2;
+                margin: 50px 0;
+                margin-bottom: 65px;
+                &:before{
+                    z-index: -1;
+                    position: absolute;
+                    content: "";
+                    left: 50%;
+                    top:50%;
+                    width: 230px;
+                    height: 144px;
+                    margin-left: -115px;
+                    margin-top: -72px;   
+                    border: 12px solid #e3e3e3;
+                }
+            }
+            .text{
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 20px;
+            }
+        }
+    }
+    @media screen and (max-width: 1074px){
+        padding: 30px 0;
+        margin-top: 30px;
+        .gr-wrap__title{
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .blocks{
+            display: block;
+            .block{
+                margin: 30px 0;
+                .title{
+                    font-size: 24px;
+                    &:before{
+                        width: 150px;
+                        height: 100px;
+                        margin-top: -50px;
+                        margin-left: -75px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 600px){
+        .gr-wrap__title{
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .blocks{
+            display: block;
+            .block{
+                margin: 30px 0;
+                .title{
+                    font-size: 24px;
+                    &:before{
+                        width: 150px;
+                        height: 100px;
+                        margin-top: -50px;
+                        margin-left: -75px;
+                    }
+                }
+            }
+        }
+    }
+}

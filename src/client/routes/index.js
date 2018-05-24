@@ -4,6 +4,7 @@ import Service from '../containers/service/index';
 import Sites from '../containers/sites/index';
 import Marketing from '../containers/marketing/index';
 import Mobile from '../containers/mobile/index';
+import Smm from '../containers/smm/index';
 // import About from '../containers/about/index';
 
 const routes = [
@@ -35,6 +36,11 @@ const routes = [
                 path: '/mobile-apps',
                 component: Mobile,
                 title: 'Услуги - Создание мобильных приложений | Flames Digital Agency'                
+            },
+            {
+                path: '/smm',
+                component: Smm,
+                title: 'Услуги - Продвижение в соц сетях | Flames Digital Agency'                
             },
         ]
     }
