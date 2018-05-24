@@ -64,8 +64,12 @@ footer{
             color: #fff;
             border: none;
             background: #ff494e;
+            transition: all 250ms ease;
             margin-top: 5px;
             border-radius: 3px;
+            &:hover{
+                background:darken(#ff494e, 5%);
+            }
         }
         .col-right{
             margin-left: 30px;

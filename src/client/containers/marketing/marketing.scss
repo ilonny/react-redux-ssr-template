@@ -1,0 +1,121 @@
+.df{
+    display: flex;
+    align-items: flex-start;
+    color: #202020;
+    & > div {
+        margin-top: -50px;
+        padding-top: 50px;
+        flex: 1 1 50%;
+        padding-bottom: 30px;
+    }
+    .side{
+        max-width: 50%;
+        &--left{
+            border-right: 1px solid #cac1c2;
+            padding-right: 20px;
+        }
+        &--right{
+            padding-left: 20px;
+        }
+        &__title{
+            text-align: center;
+            font-size: 22px;
+            font-weight: normal;
+            margin-bottom: 30px;
+        }
+        p{
+            margin: 0;
+            margin-bottom: 20px;
+            line-height: 22px;
+            font-weight: 300;
+        }
+        .bold{
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        ul{
+            padding: 0;
+            margin: 10px 0;
+            margin-bottom: 20px;
+            li{
+                list-style: none;
+                padding-left: 15px;
+                margin-bottom: 10px;
+                font-weight: 300;
+                position: relative;
+                &:before{
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    top: 5px;
+                    width: 9px;
+                    height: 9px;
+                    border: 2px solid #FF494E;
+                    border-radius: 100%;
+                }
+            }
+        }
+        .example-img{
+            box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+            max-width: 100%;
+            display: block;
+            margin: 20px auto;
+        }
+    }
+    @media screen and (max-width: 1270px){
+        & > div {
+            margin-top: -30px;
+            padding-top: 30px;
+        }
+    }
+    @media screen and (max-width: 960px){
+        & > div {
+            margin-top: -20px;
+            padding-top: 20px;
+            padding-bottom: 0px;
+        }
+        p{
+            br{
+                display: none;
+            }
+        }
+    }
+    @media screen and (max-width: 700px){
+        display: block;
+        & > div {
+            margin-top: -20px;
+            padding-top: 20px;
+            padding-bottom: 0px;
+        }
+        .side{
+            max-width: initial;
+            border: none;
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}
+.bottom-block{
+    max-width: 1100px;
+    width: 100%;
+    box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.2);
+    margin: 30px auto;
+    margin-top: 70px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 30px 50px;
+    @media screen and (max-width: 1150px){
+        padding: 20px;
+        font-size: 16px;
+        line-height: 18px;
+        br{
+            display: none;
+        }
+    }
+    @media screen and (max-width: 700px){
+        margin: 0;
+    }    
+}

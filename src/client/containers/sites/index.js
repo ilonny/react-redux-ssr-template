@@ -3,7 +3,7 @@ import './sites.scss'
 import InnerBanner from '../../components/inner-banner/index'
 import OrderForm from '../../components/order-form/index'
 
-export default class About extends PureComponent {
+export default class Sites extends PureComponent {
     componentDidMount() {
         document.title = document.title = this.props.route.title
     }

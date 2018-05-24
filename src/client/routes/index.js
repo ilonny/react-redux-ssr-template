@@ -2,6 +2,7 @@ import AppRoot from '../containers/AppRoot';
 import Home from '../containers/home/index';
 import Service from '../containers/service/index';
 import Sites from '../containers/sites/index';
+import Marketing from '../containers/marketing/index';
 // import About from '../containers/about/index';
 
 const routes = [
@@ -23,6 +24,11 @@ const routes = [
                 path: '/razrabotka-saitov',
                 component: Sites,
                 title: 'Услуги - Разработка адаптивных сайтов | Flames Digital Agency'                
+            },
+            {
+                path: '/marketing',
+                component: Marketing,
+                title: 'Услуги - Продвижение и реклама в интернете | Flames Digital Agency'                
             },
         ]
     }
