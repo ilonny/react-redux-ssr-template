@@ -17,7 +17,7 @@ export default class OrderForm extends PureComponent{
                     <form className="form">
                         <div className="order-form__title">Оставить заявку</div>
                         <div className="order-form__hint">5 минут разговора по телефону будет достаточно, чтобы определить вилку цен</div>
-                        <input name="name" placeholder="Ваше имя" />
+                        <input id="order-form-name-input" name="name" placeholder="Ваше имя" />
                         <input name="phone" placeholder="Телефон" />
                         <select name="service">
                             <option value="1">Разработка адаптивных сайтов</option>

@@ -1,0 +1,162 @@
+.mobile-wrap{
+    padding-bottom: 50px;
+    color: #202020;
+    h5{
+        font-size: 22px;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 50px;
+    }
+    .block{
+        max-width: 1100px;
+        width: 100%;
+        display: flex;
+        margin: auto;
+        box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.2);
+        &--bottom{
+            margin-top: 50px;
+        }
+        .left{
+            min-width: 420px;
+            background: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            img{
+                margin: auto;
+            }
+            .href{
+                color: #202020;
+                font-weight: bold;
+                margin-top: 20px;
+                font-size: 18px;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+        .right{
+            flex: 1 1 100%;
+            padding: 30px;
+            font-weight: 300;
+            p{
+                margin: 0;
+                margin-bottom: 20px;
+                line-height: 22px;
+                font-weight: 300;
+            }
+            .bold{
+                font-weight: bold;
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+            ul{
+                padding: 0;
+                margin: 10px 0;
+                margin-bottom: 20px;
+                li{
+                    list-style: none;
+                    padding-left: 15px;
+                    margin-bottom: 10px;
+                    font-weight: 300;
+                    position: relative;
+                    &:before{
+                        position: absolute;
+                        content: "";
+                        left: 0;
+                        top: 5px;
+                        width: 9px;
+                        height: 9px;
+                        border: 2px solid #FF494E;
+                        border-radius: 100%;
+                    }
+                }
+            }
+            .bottom{
+                p{
+                    margin: 0;
+                }
+                .submit-button{
+                    border: none;
+                    color: #fff;
+                    background: #FF494E;
+                    border-radius: 100px;
+                    padding: 10px 45px;
+                    white-space: nowrap;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 250ms ease;
+                    margin-top: 10px;
+                    float: right;
+                    img{
+                        max-width: 34px;
+                        margin-left: 10px;
+                    }
+                    &:hover{
+                        background: darken(#FF494E, 5%);                
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1150px){
+        .block{
+            .left{
+                padding: 30px;
+                min-width: 300px;
+            }
+        }
+    }
+    @media screen and (max-width: 860px){
+        .block{
+            display: block;
+            .left{
+                padding: 30px;
+                min-width: 300px;
+                img{
+                    display: none;
+                }
+                .href{
+                    margin: 0;
+                }
+            }
+            .right{
+                .bottom{
+                    button{
+                        float: none;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 650px){
+        padding-bottom: 0;
+        h5{
+            margin-bottom: 20px;
+        }
+        .block{
+            display: block;
+            .left{
+                padding: 15px;
+                img{
+                    display: none;
+                }
+                .href{
+                    margin: 0;
+                }
+            }
+            .right{
+                padding: 15px;
+                .bottom{
+                    display: block;
+                    button{
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+}
