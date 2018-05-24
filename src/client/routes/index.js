@@ -6,6 +6,7 @@ import Marketing from '../containers/marketing/index';
 import Mobile from '../containers/mobile/index';
 import Smm from '../containers/smm/index';
 import About from '../containers/about/index';
+import Collab from '../containers/collab/index';
 // import About from '../containers/about/index';
 
 const routes = [
@@ -47,6 +48,11 @@ const routes = [
                 path: '/about',
                 component: About,
                 title: 'Flames Digital Agency | О компании'                
+            },
+            {
+                path: '/collab',
+                component: Collab,
+                title: 'Flames Digital Agency | Сотрудничество'                
             },
         ]
     }

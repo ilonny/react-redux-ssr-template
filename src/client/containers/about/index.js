@@ -10,7 +10,7 @@ export default class About extends Component {
     render() {
         return (
             <div>
-                <InnerBanner type="small" title="О компании" text="О нас, в нескольких абзацах."/>
+                <InnerBanner type="small" title="О компании" text="О нас, в нескольких абзацах"/>
                 <div className="gray-section">
                     <div className="content text">
                         <p>Мы оказываем услуги по разработке качественных, стильных и нешаблонных интернет-решений<br/> и сайтов. Что бы вы нам не поручили, мы постараемся уделить особое внимание вашему проекту,<br/> выслушаем ваши пожелания и дадим полезные советы.</p>
