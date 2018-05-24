@@ -15,7 +15,8 @@ export default class Home extends Component {
         }
     }
 
-    componentDidMount(){    
+    componentDidMount() {
+        document.title = document.title = this.props.route.title
     }
     render() {
         return (
