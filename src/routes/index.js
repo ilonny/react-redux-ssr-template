@@ -6,17 +6,26 @@ import { renderToString } from 'react-dom/server';
 
 import StaticRouter from 'react-router-dom/StaticRouter';
 import { matchRoutes, renderRoutes } from 'react-router-config';
+import { createStore, applyMiddleware } from 'redux'
 
 import routes from '../client/routes';
+import configureStore from '../client/store';
+import appReducer from '../client/reducers/index'
 
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+
+const store = createStore(appReducer, applyMiddleware(thunk));
 const router = express.Router();
 
 router.get('*', (req, res) => {
     let context = {};
     const content = renderToString(
-        <StaticRouter location={req.url} context={context}>
-            {renderRoutes(routes)}
-        </StaticRouter>
+        <Provider store={store}>
+            <StaticRouter location={req.url} context={context}>
+                {renderRoutes(routes)}
+            </StaticRouter> 
+        </Provider>
     );
     let m_routes = matchRoutes(routes, req.url);
     let route_title;

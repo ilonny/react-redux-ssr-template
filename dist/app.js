@@ -1,5 +1,9 @@
 'use strict';
 
+var _ignoreStyles = require('ignore-styles');
+
+var _ignoreStyles2 = _interopRequireDefault(_ignoreStyles);
+
 var _express = require('express');
 
 var _express2 = _interopRequireDefault(_express);
@@ -30,6 +34,9 @@ var _index2 = _interopRequireDefault(_index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+(0, _ignoreStyles2.default)(['.sass', '.scss']);
+
+
 var app = (0, _express2.default)();
 app.engine('pug', require('pug').__express);
 // view engine setup
@@ -38,8 +45,8 @@ app.set('view engine', 'pug');
 
 app.locals.pretty = true;
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use((0, _morgan2.default)('dev'));
+// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use((0, _morgan2.default)('prod'));
 app.use(_bodyParser2.default.json());
 app.use(_bodyParser2.default.urlencoded({ extended: false }));
 app.use((0, _cookieParser2.default)());
@@ -58,15 +65,14 @@ app.use(function (req, res, next) {
 
 // development error handler
 // will print stacktrace
-if (app.get('env') === 'development') {
-    app.use(function (err, req, res, next) {
-        res.status(err.status || 500);
-        res.render('error', {
-            message: err.message,
-            error: err
-        });
+app.use(function (err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+        message: err.message,
+        error: err
     });
-}
+});
+if (app.get('env') === 'development') {}
 
 // production error handler
 // no stacktraces leaked to user

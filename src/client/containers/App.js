@@ -11,7 +11,7 @@ import routes from '../routes';
 // import reducers from '/reducers';
 
 const store = configureStore();
-
+console.log('storeeeee', store)
 
 export default class App extends Component {
 	render() {

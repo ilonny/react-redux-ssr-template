@@ -42,7 +42,8 @@ const webpackConfig = {
 				test: /\.(gif|png|jpg|jpeg|svg|woff|woff2|ttf|eot|webm|mp4|ico)$/,
 				exclude: /node_modules/,
 				include: path.resolve(__dirname, './src/client/assets/'),
-				use: 'url-loader?limit=10000&name=assets/[name]-[hash].[ext]'
+				// use: 'url-loader?limit=10000&name=assets/[name]-[hash].[ext]'
+				use: 'url-loader?limit=10000&name=assets/[name].[ext]'
 			}
 		]
 	},

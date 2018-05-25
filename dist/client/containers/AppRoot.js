@@ -28,14 +28,6 @@ var _index5 = require('./footer/index');
 
 var _index6 = _interopRequireDefault(_index5);
 
-var _reactFavicon = require('react-favicon');
-
-var _reactFavicon2 = _interopRequireDefault(_reactFavicon);
-
-var _favicon = require('../assets/images/favicon.ico');
-
-var _favicon2 = _interopRequireDefault(_favicon);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -69,7 +61,6 @@ var AppRoot = function (_Component) {
             return _react2.default.createElement(
                 'div',
                 { id: 'container' },
-                _react2.default.createElement(_reactFavicon2.default, { url: _favicon2.default }),
                 _react2.default.createElement(_index2.default, { toggleSidebar: this.props.toggleSidebar, sidebar: this.props.sidebar, hideSidebar: this.props.hideSidebar }),
                 _react2.default.createElement(_index4.default, {
                     toggleSidebar: this.props.toggleSidebar,
