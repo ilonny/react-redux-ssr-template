@@ -6,6 +6,9 @@ import Sidebar from '../components/sidebar/index'
 import { connect } from 'react-redux'
 import { toggleSidebar, hideSidebar } from '../actions/sidebar'
 import Footer from './footer/index'
+import Favicon from 'react-favicon'
+import Fav from '../assets/images/favicon.ico'
+
 class AppRoot extends Component {
     render() {
         console.log('app props', this.props)
@@ -18,6 +21,7 @@ class AppRoot extends Component {
         console.log('footer = ', footer)
         return (
             <div id="container">
+                <Favicon url={Fav} />
                 <Header toggleSidebar={this.props.toggleSidebar} sidebar={this.props.sidebar} hideSidebar={this.props.hideSidebar}/>
                 <Sidebar
                     toggleSidebar={this.props.toggleSidebar}

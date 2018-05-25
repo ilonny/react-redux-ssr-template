@@ -15,7 +15,7 @@ export default class OrderForm extends PureComponent{
                 <div className="hint"><span>O</span><span>R</span><span>D</span><span>E</span><span>R</span></div>
                 <div className="order-form">
                     <form className="form">
-                        <div className="order-form__title">Оставить заявку</div>
+                        <div className="order-form__title">{this.props.title ? this.props.title : "Оставить заявку"}</div>
                         <div className="order-form__hint">5 минут разговора по телефону будет достаточно, чтобы определить вилку цен</div>
                         <input id="order-form-name-input" name="name" placeholder="Ваше имя" />
                         <input name="phone" placeholder="Телефон" />
