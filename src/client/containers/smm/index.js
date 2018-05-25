@@ -37,7 +37,7 @@ export default class Smm extends PureComponent {
                         </div>
                     </div>
                 </div>
-                <OrderForm />
+                <OrderForm parentPage="smm" />
             </div>
         )
     }

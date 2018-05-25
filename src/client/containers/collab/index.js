@@ -17,7 +17,7 @@ export default class Collab extends Component {
                         <p>Для начала сотрудничества напишите нам на почту <a href="mailto:hello@fflames.ru">hello@fflames.ru</a> или заполните форму обратной связи ниже.</p>
                     </div>
                 </div>
-                <OrderForm />
+                <OrderForm parentPage="collab" text="Будем рады интересным проектам" />
             </div>
         )
     }

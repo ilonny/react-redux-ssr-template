@@ -15,7 +15,7 @@ export default class About extends PureComponent {
                 <div className="service-wrap content">
                     <ServiceBlocks page="inner"/>
                 </div>
-                <OrderForm />
+                <OrderForm parentPage="service" />
             </div>
         )
     }

@@ -32,7 +32,7 @@ export default class Collab extends Component {
                         </div>
                     </div>
                 </div>
-                <OrderForm />
+                <OrderForm parentPage="contacts" title="Обратная связь" text="Будем рады ответить на ваши вопросы"/>
             </div>
         )
     }

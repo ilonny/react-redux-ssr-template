@@ -59,7 +59,7 @@ export default class Vacancy extends Component {
                         <p className="tac">Не видишь подходящей вакансии? Отправь резюме или <br/>свяжись с нами, возможно ты настолько крут, что мы не сможем устоять</p>                        
                     </div>
                 </div>
-                <OrderForm />
+                <OrderForm parentPage="vacancy" title="Оставить отклик" text=" " />
             </div>
         )
     }

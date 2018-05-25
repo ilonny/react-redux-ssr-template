@@ -19,7 +19,7 @@ export default class About extends Component {
                         <p>Мы всегда стараемся шагать в ногу со временем с современными технологиями и всегда находимся<br/> в <Link to="vacancy">поиске</Link> людей, разделяющих наши убеждения.</p>
                     </div>
                 </div>
-                <OrderForm />
+                <OrderForm title="Обратная связь" text="Будем рады ответить на ваши вопросы" parentPage="about" />
             </div>
         )
     }

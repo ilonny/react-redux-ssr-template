@@ -65,7 +65,7 @@ export default class Marketing extends PureComponent {
                         <div className="bottom-block">Важно понимать, что реклама или продвижение сайта практически не имеют смысла если Ваш сайт далек от идеала и <br/> требует существенной доработки, или у вас нет уверенности, что сможете обработать большой поток заявок.</div>
                     </div>
                 </div>
-                <OrderForm />
+                <OrderForm parentPage="marketing" />
             </div>
         )
     }

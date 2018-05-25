@@ -91,7 +91,7 @@ export default class Sites extends PureComponent {
                         </div>
                     </div>
                 </div>
-                <OrderForm />
+                <OrderForm parentPage="sites" />
             </div>
         )
     }
