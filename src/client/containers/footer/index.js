@@ -13,12 +13,12 @@ export default class Footer extends PureComponent {
                             <div className="hrefs hrefs-left">
                                 <Link to="/about">О компании</Link>
                                 <Link to="/service">Услуги</Link>
-                                <Link to="/">Разработка сайтов</Link>
-                                <Link to="/">Продвижение и реклама в интернете</Link>
-                                <Link to="/">Разработка мобильных приложений</Link>
+                                <Link to="/razrabotka-saitov">Разработка сайтов</Link>
+                                <Link to="/marketing">Продвижение и реклама в интернете</Link>
+                                <Link to="/mobile-apps">Разработка мобильных приложений</Link>
                             </div>
                             <div className="hrefs">
-                                <Link to="/">Продвижение в социальных сетях</Link>
+                                <Link to="/smm">Продвижение в социальных сетях</Link>
                                 <Link to="/collab">Сотрудничество</Link>
                                 <Link to="/contacts">Контакты</Link>
                                 <Link to="/vacancy">Вакансии</Link>
