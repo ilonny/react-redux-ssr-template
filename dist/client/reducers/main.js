@@ -6,14 +6,16 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _constants = require('constants');
+var _index = require('../constants/index');
 
-var _constants2 = _interopRequireDefault(_constants);
+var _index2 = _interopRequireDefault(_index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var initialState = {
-	test: 123
+	sidebar: {
+		opened: false
+	}
 };
 
 var mainReducer = function mainReducer() {
@@ -21,9 +23,18 @@ var mainReducer = function mainReducer() {
 	var action = arguments[1];
 
 	switch (action.type) {
-		case _constants2.default.TEST_ACTION:
-			console.log('TEST_ACTION dispatched');
-			return _extends({}, state, { test: true });
+		case _index2.default.TOGGLE_SIDEBAR:
+			return _extends({}, state, {
+				sidebar: {
+					opened: !state.sidebar.opened
+				}
+			});
+		case _index2.default.HIDE_SIDEBAR:
+			return _extends({}, state, {
+				sidebar: {
+					opened: false
+				}
+			});
 		default:
 			return state;
 	}

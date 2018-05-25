@@ -10,6 +10,8 @@ var _App = require('./containers/App');
 
 var _App2 = _interopRequireDefault(_App);
 
+require('./assets/material-design-iconic-font/css/material-design-iconic-font.min.scss');
+
 require('./assets/styles/style.scss');
 
 var _reactHotLoader = require('react-hot-loader');

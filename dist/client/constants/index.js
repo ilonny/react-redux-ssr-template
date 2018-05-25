@@ -11,7 +11,8 @@ var _keyMirror2 = _interopRequireDefault(_keyMirror);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _default = (0, _keyMirror2.default)({
-	START_LOAD_UNITS: null
+	TOGGLE_SIDEBAR: null,
+	HIDE_SIDEBAR: null
 });
 
 exports.default = _default;
