@@ -16,7 +16,7 @@ export default class Sidebar extends Component {
                 </div>
                 <div className="sidebar-bottom">
                     <p>Flames Digital Agency</p>
-                    <p>г. Сургут, ул. Лермонтова 11/3, кв 19</p>
+                    {/* <p>ХМАО, г. Сургут</p> */}
                     <p>
                         <a href="tel:+79195356312" className="phone">
                             <MaterialIcon type="phone" />
