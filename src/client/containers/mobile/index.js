@@ -17,7 +17,6 @@ export default class Mobile extends PureComponent {
         }
     }
     clickButton(){
-        // console.log('clickButotn()')
         // this.setState(state => {
         //     return {
         //         ...state,
@@ -27,7 +26,6 @@ export default class Mobile extends PureComponent {
         document.getElementById('order-form-name-input').focus();
     }
     render() {
-        console.log('mobile state', this.state)
         return (
             <div>
                 <InnerBanner type="big" title="Разработка мобильных<br> приложений" text="Создаем мобильные приложения для Apple iOS и Google Android.<br> Доведем приложение от идеи до публикации в маркетах."/>

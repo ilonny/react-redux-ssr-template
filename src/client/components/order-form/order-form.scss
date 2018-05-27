@@ -169,3 +169,14 @@
         }
     }
 }
+.has-error{
+    border-color: #FF494E !important;
+}
+.err-list{
+    p{
+        font-size: 14px;
+        font-weight: 300;
+        color: #ff494e;
+        margin-bottom: 0;
+    }
+}

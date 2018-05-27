@@ -3,6 +3,20 @@ import Link from 'react-router-dom/Link'
 import SocialLinks from '../../components/social-links/index'
 import './footer.scss'
 export default class Footer extends PureComponent {
+    scrollToTop(scrollDuration) {
+            var cosParameter = window.scrollY / 2,
+            scrollCount = 0,
+            oldTimestamp = performance.now();
+        function step (newTimestamp) {
+            scrollCount += Math.PI / (scrollDuration / (newTimestamp - oldTimestamp));
+            if (scrollCount >= Math.PI) window.scrollTo(0, 0);
+            if (window.scrollY === 0) return;
+            window.scrollTo(0, Math.round(cosParameter + cosParameter * Math.cos(scrollCount)));
+            oldTimestamp = newTimestamp;
+            window.requestAnimationFrame(step);
+        }
+        window.requestAnimationFrame(step);
+    }
     render(){
         return (
             <footer>
@@ -11,17 +25,17 @@ export default class Footer extends PureComponent {
                         <div className="col__title">Меню</div>
                         <div className="hrefs-wrap">
                             <div className="hrefs hrefs-left">
-                                <Link to="/about">О компании</Link>
-                                <Link to="/service">Услуги</Link>
-                                <Link to="/razrabotka-saitov">Разработка сайтов</Link>
-                                <Link to="/marketing">Продвижение и реклама в интернете</Link>
-                                <Link to="/mobile-apps">Разработка мобильных приложений</Link>
+                                <Link onClick={() => this.scrollToTop(250)} to="/about">О компании</Link>
+                                <Link onClick={() => this.scrollToTop(250)} to="/service">Услуги</Link>
+                                <Link onClick={() => this.scrollToTop(250)} to="/razrabotka-saitov">Разработка сайтов</Link>
+                                <Link onClick={() => this.scrollToTop(250)} to="/marketing">Продвижение и реклама в интернете</Link>
+                                <Link onClick={() => this.scrollToTop(250)} to="/mobile-apps">Разработка мобильных приложений</Link>
                             </div>
                             <div className="hrefs">
-                                <Link to="/smm">Продвижение в социальных сетях</Link>
-                                <Link to="/collab">Сотрудничество</Link>
-                                <Link to="/contacts">Контакты</Link>
-                                <Link to="/vacancy">Вакансии</Link>
+                                <Link onClick={() => this.scrollToTop(250)} to="/smm">Продвижение в социальных сетях</Link>
+                                <Link onClick={() => this.scrollToTop(250)} to="/collab">Сотрудничество</Link>
+                                <Link onClick={() => this.scrollToTop(250)} to="/contacts">Контакты</Link>
+                                <Link onClick={() => this.scrollToTop(250)} to="/vacancy">Вакансии</Link>
                             </div>
                         </div>
                     </div>

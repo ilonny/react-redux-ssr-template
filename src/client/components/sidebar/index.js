@@ -9,7 +9,6 @@ export default class Sidebar extends Component {
         }
     }
     render() {
-        console.log('sidebar props', this.props)
         return (
             <aside className={this.props.opened ? "sidebar opened" : "sidebar"}>
                 <div className="sidebar-hrefs">

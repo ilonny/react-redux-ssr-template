@@ -45,6 +45,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var store = (0, _redux.createStore)(_index2.default, (0, _redux.applyMiddleware)(_reduxThunk2.default));
 var router = _express2.default.Router();
 
+var nodemailer = require('nodemailer');
+
 router.get('*', function (req, res) {
     var context = {};
     var content = (0, _server.renderToString)(_react2.default.createElement(
@@ -64,6 +66,44 @@ router.get('*', function (req, res) {
         }
     });
     res.render('index', { title: route_title, data: false, content: content });
+});
+
+router.post('/form', function (req, res) {
+    var transporter = nodemailer.createTransport({
+        service: 'Yandex',
+        auth: {
+            user: 'fflamesstudio@yandex.ru', // Your email id
+            pass: 'Qwerty123' // Your password
+        }
+    });
+    var text = JSON.stringify(req.body);
+
+    var mailOptions = {
+        from: 'fflamesstudio@yandex.ru', // sender address
+        to: 'mail@gornak.me', // list of receivers
+        subject: 'Email from Flames', // Subject line
+        text: text //, // plaintext body
+        // html: '<b>Hello world ✔</b>' // You can choose to send an HTML body instead
+    };
+
+    // res.json({
+    //     // yo: info.response,
+    //     message: 'Спасибо! Ваше сообщение успешно отправлено, скоро мы свяжемся с вами',
+    //     status: '200'
+    // });
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            console.log(error);
+            res.json({ yo: 'error' });
+        } else {
+            console.log('Message sent: ' + info.response);
+            res.json({
+                // yo: info.response,
+                message: 'Спасибо! Ваше сообщение успешно отправлено, скоро мы свяжемся с вами',
+                status: '200'
+            });
+        };
+    });
 });
 
 module.exports = router;

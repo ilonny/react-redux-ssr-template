@@ -20,7 +20,6 @@ export default class Header extends Component {
         this.props.toggleSidebar()
     }
     render() {
-        console.log('hedaer props', this.props)
         return (
             <header className="header">
                 <div className="left-side">

@@ -41,7 +41,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // import reducers from '/reducers';
 
 var store = (0, _store2.default)();
-console.log('storeeeee', store);
 
 var App = function (_Component) {
 	_inherits(App, _Component);

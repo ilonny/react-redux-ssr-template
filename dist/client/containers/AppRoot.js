@@ -28,6 +28,8 @@ var _index5 = require('./footer/index');
 
 var _index6 = _interopRequireDefault(_index5);
 
+var _reactTransitionGroup = require('react-transition-group');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -37,6 +39,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 // import Link from 'react-router-dom/Link';
 
+
+// import { AnimatedSwitch } from 'react-router-transition';
 
 var AppRoot = function (_Component) {
     _inherits(AppRoot, _Component);
@@ -50,14 +54,15 @@ var AppRoot = function (_Component) {
     _createClass(AppRoot, [{
         key: 'render',
         value: function render() {
-            console.log('app props', this.props);
             var footer = void 0;
             if (this.props.location.pathname != "/") {
                 footer = _react2.default.createElement(_index6.default, null);
             } else {
                 footer = null;
             }
-            console.log('footer = ', footer);
+            // const currentKey = location.pathname.split('/')[1] || '/' ? location.pathname.split('/')[1] || '/' : new Date();
+            var currentKey = new Date();
+            var timeout = { enter: 500, exit: 500 };
             return _react2.default.createElement(
                 'div',
                 { id: 'container' },
@@ -70,7 +75,15 @@ var AppRoot = function (_Component) {
                 _react2.default.createElement(
                     'main',
                     { className: 'mdl-layout__content' },
-                    (0, _reactRouterConfig.renderRoutes)(this.props.route.routes)
+                    _react2.default.createElement(
+                        _reactTransitionGroup.TransitionGroup,
+                        { component: 'main', className: 'page-main' },
+                        _react2.default.createElement(
+                            _reactTransitionGroup.CSSTransition,
+                            { key: currentKey, timeout: timeout, classNames: 'fade', appear: true },
+                            (0, _reactRouterConfig.renderRoutes)(this.props.route.routes)
+                        )
+                    )
                 ),
                 footer
             );
