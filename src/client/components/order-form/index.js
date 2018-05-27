@@ -110,11 +110,13 @@ export default class OrderForm extends PureComponent{
                             status: 'success'
                         }
                     })
-                    setTimeout(() => {
-                        console.log('timeout!')
-                        this.clearForm();
-                    }, 3000);
                 }
+                setTimeout(() => {
+                    console.log('timeout!')
+                    this.clearForm();
+                }, 3000);
+            }).catch(() => {
+                alert('Возникла ошибка, попробуйте позже')
             })
         }
     }

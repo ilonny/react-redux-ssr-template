@@ -8,7 +8,7 @@
     "dev": "webpack-dev-server --colors --progress",
     "dist": "webpack -p",
     "server": "babel-node server.js",
-    "start": "node ./bin/www",
+    "start": "forever ./bin/www",
     "build": "babel src/ -d dist/ && webpack -p"
   },
   "author": "Vlad Feninets <v.feninets@gmail.com>",

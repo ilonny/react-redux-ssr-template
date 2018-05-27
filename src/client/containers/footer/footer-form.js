@@ -106,11 +106,11 @@ export default class FooterForm extends Component {
                             status: 'success'
                         }
                     })
-                    setTimeout(() => {
-                        console.log('timeout!')
-                        this.clearForm();
-                    }, 3000);
                 }
+                setTimeout(() => {
+                    console.log('timeout!')
+                    this.clearForm();
+                }, 3000);
             })
         }
     }
