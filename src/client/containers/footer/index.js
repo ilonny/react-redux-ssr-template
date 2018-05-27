@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react'
 import Link from 'react-router-dom/Link'
 import SocialLinks from '../../components/social-links/index'
 import './footer.scss'
+import FooterForm from './footer-form.js'
+
 export default class Footer extends PureComponent {
     scrollToTop(scrollDuration) {
             var cosParameter = window.scrollY / 2,
@@ -42,12 +44,7 @@ export default class Footer extends PureComponent {
                     <div className="right-side">
                         <div className="col-left">
                             <div className="col__title">Обратная связь</div>
-                            <form>
-                                <input placeholder="Ваше имя" />
-                                <input placeholder="Телефон" />
-                                <button>Отправить</button>
-                                <div className="clearfix"></div>
-                            </form>
+                            <FooterForm />
                         </div>
                         <div className="col-right">
                             <a href="mailto:hello@fflames.ru" className="col__title">hello@flames.ru</a>

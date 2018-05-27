@@ -76,7 +76,7 @@ const webpackConfig = {
 			path: outputPath
 		}),
 		new webpack.NamedModulesPlugin(),
-		// new webpack.HotModuleReplacementPlugin(),
+		new webpack.HotModuleReplacementPlugin(),
 		// new BrowserSyncPlugin(
 		// 	{
 		// 		// browse to http://localhost:3000/ during development,
