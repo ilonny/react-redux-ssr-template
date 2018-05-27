@@ -1,0 +1,17 @@
+.not-found-wrap{
+    padding-bottom: 50px;
+    text-align: center;
+    .img-wrap{
+        max-width: 350px;
+        margin: auto;
+        img{
+            display: block;
+            max-width: 100%;
+        }
+        a{
+            display: block;
+            color: #202020;
+            margin-top: 15px;
+        }
+    }
+}

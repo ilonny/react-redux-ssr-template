@@ -9,6 +9,7 @@ import About from '../containers/about/index';
 import Collab from '../containers/collab/index';
 import Vacancy from '../containers/vacancy/index';
 import Contacts from '../containers/contacts/index';
+import NotFound from '../containers/notfound/index';
 // import About from '../containers/about/index';
 
 const routes = [
@@ -66,7 +67,15 @@ const routes = [
                 component: Contacts,
                 title: 'Flames Digital Agency | Контакты'
             },
+            {
+                path: '*',
+                component: NotFound,
+                title: 'Flames Digital Agency | Page not found'
+            },
         ]
+    },
+    {
+        component: NotFound,
     }
 ];
 

@@ -1,9 +1,11 @@
-const webpack = require('webpack')
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const outputPath = path.resolve(__dirname, './dist')
+const webpack = require('webpack');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const outputPath = path.resolve(__dirname, './dist');
 const WriteFilePlugin = require('write-file-webpack-plugin');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 const webpackConfig = {
 	entry: {
 		app: [
@@ -29,14 +31,20 @@ const webpackConfig = {
 				use: 'babel-loader'
 			},
 			{
-				test: /\.scss$/,
+				test: /\.(css)$/,
 				exclude: /node_modules/,
-				use: [
-					'style-loader',
-					'css-loader',
-					'postcss-loader',
-					'sass-loader'
-				]
+				loader: ExtractTextPlugin.extract({
+					fallback: 'style-loader',
+					use: 'css-loader'
+				})
+			},
+			{
+				test: /\.(scss)$/,
+				exclude: /node_modules/,
+				loader: ExtractTextPlugin.extract({
+					fallback: 'style-loader',
+					use: 'css-loader!postcss-loader!sass-loader'
+				})
 			},
 			{
 				test: /\.(gif|png|jpg|jpeg|svg|woff|woff2|ttf|eot|webm|mp4|ico)$/,
@@ -68,20 +76,21 @@ const webpackConfig = {
 			path: outputPath
 		}),
 		new webpack.NamedModulesPlugin(),
-		new webpack.HotModuleReplacementPlugin(),
-		new BrowserSyncPlugin(
-			{
-				// browse to http://localhost:3000/ during development,
-				// ./public directory is being served
-				host: 'localhost',
-				port: 3000,
-				// server: { baseDir: ['public'] }
-				proxy: 'http://localhost:8888/',
-			  },
-			  {
-				  reload: false
-			  }
-		)
+		// new webpack.HotModuleReplacementPlugin(),
+		// new BrowserSyncPlugin(
+		// 	{
+		// 		// browse to http://localhost:3000/ during development,
+		// 		// ./public directory is being served
+		// 		host: 'localhost',
+		// 		port: 3000,
+		// 		// server: { baseDir: ['public'] }
+		// 		proxy: 'http://localhost:8888/',
+		// 	  },
+		// 	  {
+		// 		  reload: false
+		// 	  }
+		// ),
+		new ExtractTextPlugin('styles.css'),
 		// new WriteFilePlugin({
 		// 	test: /^(?!.*(hot)).*/,
 		// }),

@@ -48,6 +48,10 @@ var _index19 = require('../containers/contacts/index');
 
 var _index20 = _interopRequireDefault(_index19);
 
+var _index21 = require('../containers/notfound/index');
+
+var _index22 = _interopRequireDefault(_index21);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import About from '../containers/about/index';
@@ -95,7 +99,13 @@ var routes = [{
         path: '/contacts',
         component: _index20.default,
         title: 'Flames Digital Agency | Контакты'
+    }, {
+        path: '*',
+        component: _index22.default,
+        title: 'Flames Digital Agency | Page not found'
     }]
+}, {
+    component: _index22.default
 }];
 
 var _default = routes;
