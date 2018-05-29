@@ -14,35 +14,35 @@ require('./assets/material-design-iconic-font/css/material-design-iconic-font.mi
 
 require('./assets/styles/style.scss');
 
-var _reactHotLoader = require('react-hot-loader');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var renderApp = function renderApp(Component) {
-    (0, _reactDom.render)(_react2.default.createElement(
-        _reactHotLoader.AppContainer,
-        null,
-        _react2.default.createElement(Component, null)
-    ), document.querySelector('#mount_place'));
-};
+// import { AppContainer } from 'react-hot-loader'
 
-renderApp(_App2.default);
+// const renderApp = (Component) => {
+//     render(
+//         <AppContainer>
+//             <Component />
+//         </AppContainer>,
+//         document.querySelector('#mount_place')
+//     )
+// }
 
-if (module.hot) {
-    module.hot.accept('./containers/App', function () {
-        renderApp(_App2.default);
-    });
-}
+
+// renderApp(App)
+
+
+// if (module.hot) {
+//     module.hot.accept('./containers/App', () => { renderApp(App) })
+// }
+
 
 (0, _reactDom.render)(_react2.default.createElement(_App2.default, null), document.querySelector('#mount_place'));
 ;
 
 var _temp = function () {
-    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-        return;
-    }
-
-    __REACT_HOT_LOADER__.register(renderApp, 'renderApp', 'src/client/index.js');
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
 }();
 
 ;

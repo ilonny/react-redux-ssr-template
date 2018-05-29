@@ -5,11 +5,13 @@ const outputPath = path.resolve(__dirname, './dist');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const webpackConfig = {
 	entry: {
 		app: [
-			'react-hot-loader/patch',
+			// 'react-hot-loader/patch',
 			path.resolve(__dirname, './src/client/index.js')
 		]
 	},
@@ -70,13 +72,14 @@ const webpackConfig = {
 		// }
 	},
 	plugins: [
+		// new BundleAnalyzerPlugin(),
 		new HtmlWebpackPlugin({
 			template: path.join(__dirname, './src/client/assets/index.html'),
 			filename: 'index.html',
 			path: outputPath
 		}),
 		new webpack.NamedModulesPlugin(),
-		new webpack.HotModuleReplacementPlugin(),
+		// new webpack.HotModuleReplacementPlugin(),
 		// new BrowserSyncPlugin(
 		// 	{
 		// 		// browse to http://localhost:3000/ during development,
@@ -91,6 +94,17 @@ const webpackConfig = {
 		// 	  }
 		// ),
 		new ExtractTextPlugin('styles.css'),
+		new webpack.optimize.CommonsChunkPlugin({
+			name: 'vendor',
+			filename: 'vendor.js',
+			minChunks (module) {
+			  return module.context &&
+					 module.context.indexOf('node_modules') >= 0;
+			}
+		  }),
+		new StyleExtHtmlWebpackPlugin({
+			minify: true
+		})
 		// new WriteFilePlugin({
 		// 	test: /^(?!.*(hot)).*/,
 		// }),
