@@ -24,9 +24,9 @@ export default class Sidebar extends Component {
                         </a>
                     </p>
                     <p>
-                        <a href="mailto:info@fflames.ru" className="phone">
+                        <a href="mailto:hello@fflames.ru" className="phone">
                             <MaterialIcon type="email" />
-                            <span>info@fflames.ru</span>
+                            <span>hello@fflames.ru</span>
                         </a>
                     </p>
                 </div>

@@ -30,7 +30,7 @@ class AppRoot extends Component {
                 />
                 <main className="mdl-layout__content">
                     <TransitionGroup component="main" className="page-main">
-                        <CSSTransition key={currentKey} timeout={timeout} classNames="fade" appear={true}>
+                        <CSSTransition key={currentKey} timeout={timeout} classNames="fade" >
                             {renderRoutes(this.props.route.routes)}
                         </CSSTransition>
                     </TransitionGroup>

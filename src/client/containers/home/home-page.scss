@@ -229,5 +229,9 @@
                 }
             }
         }
+        @media screen and (max-width: 1023px){
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }

@@ -102,9 +102,9 @@ const webpackConfig = {
 					 module.context.indexOf('node_modules') >= 0;
 			}
 		  }),
-		new StyleExtHtmlWebpackPlugin({
-			minify: true
-		})
+		// new StyleExtHtmlWebpackPlugin({
+		// 	minify: true
+		// })
 		// new WriteFilePlugin({
 		// 	test: /^(?!.*(hot)).*/,
 		// }),

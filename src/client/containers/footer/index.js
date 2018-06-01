@@ -47,7 +47,7 @@ export default class Footer extends PureComponent {
                             <FooterForm />
                         </div>
                         <div className="col-right">
-                            <a href="mailto:hello@fflames.ru" className="col__title">hello@flames.ru</a>
+                            <a href="mailto:hello@fflames.ru" className="col__title">hello@fflames.ru</a>
                             <a href="tel:+79195356312" className="col-right__phone">+7 (919) 535-63-12</a>
                             <SocialLinks />
                             <p className="copy">Flames Digital Agency, © 2018</p>

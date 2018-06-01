@@ -80,7 +80,7 @@ var AppRoot = function (_Component) {
                         { component: 'main', className: 'page-main' },
                         _react2.default.createElement(
                             _reactTransitionGroup.CSSTransition,
-                            { key: currentKey, timeout: timeout, classNames: 'fade', appear: true },
+                            { key: currentKey, timeout: timeout, classNames: 'fade' },
                             (0, _reactRouterConfig.renderRoutes)(this.props.route.routes)
                         )
                     )
