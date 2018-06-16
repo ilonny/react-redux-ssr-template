@@ -42,7 +42,7 @@ export default class Sites extends PureComponent {
                             <div className="block">
                                 <div className="text">
                                     <div className="title">Мотивирует пользователей совершать<br/> необходимые действия</div>
-                                    <div className="desc">И приводит нужной цели: оформлению заказа,<br/> заполнению формы обратной связи.</div>
+                                    <div className="desc">И приводит к нужной цели: оформлению заказа,<br/> заполнению формы обратной связи.</div>
                                 </div>
                                 <span className="divider"></span>
                                 <p className="num">04</p>
@@ -52,7 +52,7 @@ export default class Sites extends PureComponent {
                                 <span className="divider"></span>
                                 <div className="text">
                                     <div className="title">Контент сайта в доступной форме</div>
-                                    <div className="desc">Текстовая и графическая информация<br/> работающая на достижение целей сайта</div>
+                                    <div className="desc">Текстовая и графическая информация,<br/> работающая на достижение целей сайта</div>
                                 </div>
                             </div>
                         </div>

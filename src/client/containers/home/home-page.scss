@@ -198,6 +198,9 @@
                     }
                 }
             }
+            @media screen and (max-height: 670px){
+                padding: 6px;
+            }
         }
         @media screen and (max-width: 860px) {
             padding-top: 80px !important;
@@ -206,6 +209,12 @@
         @media screen and (max-height: 820px) {
             padding-top: 80px ;
             .content{
+                h1{
+                    font-size: 35px;
+                }
+                h2{
+                    font-size: 30px;
+                }
                 .services{
                     margin-top: 50px ;
                 }
@@ -213,7 +222,7 @@
         }
         @media screen and (max-height: 715px) {
             padding-top: 70px;
-            padding-bottom: 70px;
+            padding-bottom: 90px;
             .content{
                 h1{
                     font-size: 40px;
